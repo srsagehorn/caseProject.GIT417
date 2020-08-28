@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../public/stylesheets/style.css" />
+    <title>EEI</title>
+  </head>
+  <body>
+    <header>
+      <div class="col-md-10 center">
+        <a href="index.html">
+          <p id="brandName">Engineering Evaluations Inc.</p>
+        </a>
+        <nav>
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <form class="contactForm col-md-6">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="John Smith"
+          />
+          <label for="exampleFormControlInput1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="name@example.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Subject</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>-----Chose One-----</option>
+            <option>Building Inspection</option>
+            <option>Failure Analysis</option>
+            <option>Insurance Claims</option>
+            <option>Expert Witness</option>
+            <option>Design</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Message</label>
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>
+    </main>
+    <footer>
+      <address class="clear">
+        Engineering Evaluations Inc.<br />
+        10000 Watson Rd.Suite L32<br />
+        St.Louis, MO 63126<br />
+        <span id="desktop">314-821-8282</span>
+        <a id="mobile" href="tel:480-555-5555">480-555-5555</a><br />
+      </address>
+      <small>Engineering Evaluations Inc. | All Rights Reserved 2020 ©</small>
+    </footer>
+    <!-- jQuery first, then Popper.js, Bootstrap JS, Modernizer JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="modernizr.custom.05819.js"></script>
+  </body>
+</html>

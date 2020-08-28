@@ -1,0 +1,69 @@
+body {
+  /* background-color: rgb(63, 63, 63); */
+}
+
+/* -----HEADER----- */
+header {
+  background-color: black;
+}
+
+#brandName {
+  color: white;
+  display: inline-block;
+  font-size: 64px;
+  margin-left: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+nav {
+  display: inline-block;
+  float: right;
+  margin-right: 20px;
+  position: relative;
+  top: 71px;
+}
+
+nav a {
+  color: white;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -----MAIN----- */
+/* -----HOME----- */
+/* -----ABOUT----- */
+/* -----SERVICES----- */
+/* -----CONTACT----- */
+form {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: 20px;
+  filter: drop-shadow(0 0 0.25rem #d0d0d0);
+  box-shadow: 0 0 0.25rem #d0d0d0;
+}
+
+/* -----FOOTER----- */
+footer {
+  border-top: 4px solid black;
+  margin-top: 40px;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+}
+
+small {
+  color: black;
+  text-align: center;
+}
