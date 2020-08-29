@@ -20,7 +20,15 @@ nav {
   float: right;
   margin-right: 20px;
   position: relative;
-  top: 61px;
+  top: 59px;
+}
+
+.nav-tabs {
+  border-bottom: none;
+}
+
+.nav-link .active {
+  border: none;
 }
 
 nav a {
