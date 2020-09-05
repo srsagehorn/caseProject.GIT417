@@ -45,23 +45,28 @@ const calc = {
   ],
 };
 
-let total;
+let total = 0;
 
-for (let i = 0; i < calc.service.length; i++) {
-  $(".checks").append(
-    `<div class="form-check"><input type="checkbox" id = "check"${i} name="amount"${i} value="${calc.cost[i]}">${calc.service[i]}<br>`
-  );
+function displayServices() {
+  for (let i = 0; i < calc.service.length; i++) {
+    $(".checks").append(
+      `<div class="form-check"><input class = "uncheck" type="checkbox" id = "check${i}" value="${calc.cost[i]}"> ${calc.service[i]}<br>`
+    );
+  }
 }
 
 $(".sum").on("click", function () {
-  console.log("yes");
-  console.log($("#check0").checked);
   for (let i = 0; i < calc.service.length; i++) {
-    if ($("#check" + [i]).checked == true) {
-      console.log("yes" + i);
-      total += cost[i].value;
+    if ($("#check" + [i]).prop("checked")) {
+      let num = $("#check" + [i]).val();
+      console.log(parseInt(num));
+      total += parseInt(num);
     }
   }
   $(".total").text("$" + total);
   total = 0;
+
+  $(".uncheck").prop("checked", false);
 });
+
+displayServices();
