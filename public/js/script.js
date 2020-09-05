@@ -48,7 +48,10 @@ const calc = {
 let total = 0;
 
 function displayServices() {
+  // loop through the items
   for (let i = 0; i < calc.service.length; i++) {
+    // create a check box for each entry
+    // include the value
     $(".checks").append(
       `<div class="form-check"><input class = "uncheck" type="checkbox" id = "check${i}" value="${calc.cost[i]}"> ${calc.service[i]}<br>`
     );
@@ -56,16 +59,22 @@ function displayServices() {
 }
 
 $(".sum").on("click", function () {
+  // loop through all check boxes
   for (let i = 0; i < calc.service.length; i++) {
+    // if it is checked
     if ($("#check" + [i]).prop("checked")) {
+      // turn the string into a number and add the value to the total
       let num = $("#check" + [i]).val();
       console.log(parseInt(num));
       total += parseInt(num);
     }
   }
-  $(".total").text("$" + total);
+  // display the total
+  // if not using jquery this would have been
+  // document.getElementById("total").innerHTML= "$" + total
+  $("#total").text("$" + total);
   total = 0;
-
+  // uncheck all boxes
   $(".uncheck").prop("checked", false);
 });
 
