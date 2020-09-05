@@ -51,6 +51,10 @@ main {
 /* -----HOME----- */
 /* -----ABOUT----- */
 /* -----SERVICES----- */
+
+.accordion {
+  margin-bottom: 200px;
+}
 /* -----CONTACT----- */
 form {
   margin-left: auto;
