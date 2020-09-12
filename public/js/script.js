@@ -59,6 +59,18 @@ function displayServices() {
 }
 
 $(".sum").on("click", function () {
+  // if they did not select a location
+  // alert that they need to
+  // stop the rest of the function from running
+  if (
+    !$("#mo").prop("checked") &&
+    !$("#il").prop("checked") &&
+    !$("#out").prop("checked")
+  ) {
+    alert("Please select a location.");
+    return;
+  }
+
   // loop through all check boxes
   for (let i = 0; i < calc.service.length; i++) {
     // if it is checked
@@ -69,10 +81,18 @@ $(".sum").on("click", function () {
       total += parseInt(num);
     }
   }
+
+  // if illinois is selected, add 100 to the total
+  // if out of state is selected, add 500
+  if ($("#il").prop("checked")) {
+    total += 100;
+  } else if ($("#out").prop("checked")) {
+    total += 500;
+  }
   // display the total
   // if not using jquery this would have been
   // document.getElementById("total").innerHTML= "$" + total
-  $("#total").text("$" + total);
+  $("#total").text("Your price is $" + total);
   total = 0;
   // uncheck all boxes
   $(".uncheck").prop("checked", false);
