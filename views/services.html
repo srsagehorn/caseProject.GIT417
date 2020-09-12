@@ -884,6 +884,7 @@
               diagnostics.
               <br /><br />
               - Certified Computer & Network expert witness.
+            </div>
           </div>
         </div>
       </div>
@@ -891,16 +892,40 @@
       <form class="calculate">
         <h2>Calculate your price</h2>
         <div class="form-group checks">
-          <br>
-        <div class="form-check state"><input class = "uncheck" name="singleSelect" type="radio" id = "mo" value="0"> Missouri
+          <br />
+          <div class="form-check state">
+            <input
+              class="uncheck"
+              name="singleSelect"
+              type="radio"
+              id="mo"
+              value="0"
+            />
+            Missouri
+          </div>
+          <div class="form-check state">
+            <input
+              class="uncheck"
+              name="singleSelect"
+              type="radio"
+              id="il"
+              value="100"
+            />
+            Illinois $100
+          </div>
+          <div class="form-check state">
+            <input
+              class="uncheck"
+              name="singleSelect"
+              type="radio"
+              id="out"
+              value="500"
+            />
+            Out of State $500
+          </div>
+          <br />
+          <br />
         </div>
-        <div class="form-check state"><input class = "uncheck" name="singleSelect" type="radio" id = "il" value="100"> Illinois $100
-        </div>
-        <div class="form-check state"><input class = "uncheck" name="singleSelect" type="radio" id = "out" value="500"> Out of State $500
-        </div>
-        <br>
-        <br>
-      </div>
         <button type="button" class="btn btn-primary sum">Calculate</button>
         <span id="total"></span>
       </form>
