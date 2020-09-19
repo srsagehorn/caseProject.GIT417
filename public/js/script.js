@@ -106,21 +106,14 @@ displayServices();
 
 $("#contactBtn").on("click", function (event) {
   event.preventDefault();
-  //   if ($("#formName").val("") || !$("#formName").val().includes("")) {
-  //     alert("Please enter your full name");
-  //   }
-  //   // else if ($("#formMessage").text("")) {
-  //   //   alert("Please enter a message");
-  //   // } else if ($("#default").prop("checked")) {
-  //   //   alert("Please chose the subject of your message");
-  //   // }
-  //   // alert("Thank you for your message, we will get back with you shortly!");
 
   try {
+    //if your the name is left blank or doesnt contain a space (meaning first and last name) throw err
     if ($("#formName").val() === "" || !$("#formName").val().includes(" ")) {
       throw "*Please enter your full name";
       formHasErrors = true;
     }
+    // if the email is left blank or doesnt contain an @ or . or does contain a " " (ie is an invalid email) throw err
     if (
       $("#formEmail").val() === "" ||
       !$("#formEmail").val().includes("@") ||
@@ -129,18 +122,22 @@ $("#contactBtn").on("click", function (event) {
     ) {
       throw "*Please enter a valid email";
     }
+    // if the subject selected is left as the default throw err
     if ($("#formSubject").val() === "default") {
       throw "*Please enter a subject";
     }
-    if ($("#formMessage").val() === "") {
-      throw "*Please enter a message";
-    }
   } catch (error) {
+    // post error to page and set marker as true
     $("#error").text(error);
     formHasErrors = true;
   } finally {
+    // if there are uncaught errors alert the console
     if (formHasErrors) {
       console.log("fix form errors");
     }
   }
+  // let them know we have recieved there message and clear the form
+  alert("Thank you for your message we will get back with you shortly");
+
+  $(".contactForm").trigger("reset");
 });

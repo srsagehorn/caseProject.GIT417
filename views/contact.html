@@ -61,12 +61,12 @@
           <label for="formSubject">Subject</label>
           <select class="form-control" id="formSubject">
             <option id="default" value="default">-----Chose One-----</option>
-            <option value="insp">Building Inspection</option>
-            <option value="fail">Failure Analysis</option>
-            <option value="insure">Insurance Claims</option>
-            <option vlaue="exp">Expert Witness</option>
-            <option value="des">Design</option>
-            <option value="misc">Other</option>
+            <option>Building Inspection</option>
+            <option>Failure Analysis</option>
+            <option>Insurance Claims</option>
+            <option>Expert Witness</option>
+            <option>Design</option>
+            <option>Other</option>
           </select>
         </div>
         <div class="form-group">
@@ -127,3 +127,11 @@
     <script src="../public/js/script.js"></script>
   </body>
 </html>
+
+<!-- Almost all of my code errors in the history of ever are syntax errors. Either spelling or parentheses and brackets. I use an extension called prettier that automaticaly fixes indenting and simple syntax errors like missing semi colons and commas so that is very helpful.
+
+The debugging I did in this assignment was primarily with the #formSubject selection area. I was trying to make .prop("check") work as if it was a check box as I have previously done on my calculations page. This obviously did not work and I found that out because it was skipping over this exception handling and jumping straight to "Enter a message" when the drop down was still on default. I guess that would be a logic error because the syntax was correct, I just used the wrong method so it did not do what I wanted it to do. 
+
+This was a pretty simple activity so I didnt use the console but typically I live and breath using console.log(). On more complex projects I will use a linter. I'll be honest, I dont like those very much and only find them useful on group projects.
+
+I had never used the watch function in the inspector so that was a cool thing to learn. Oftentimes variables change ten times before I need them and sometimes I dont know where my code broke down so thats useful -->
