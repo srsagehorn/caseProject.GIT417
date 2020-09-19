@@ -47,6 +47,8 @@ const calc = {
 
 let total = 0;
 
+let formHasErrors = false;
+
 function displayServices() {
   // loop through the items
   for (let i = 0; i < calc.service.length; i++) {
@@ -99,3 +101,46 @@ $(".sum").on("click", function () {
 });
 
 displayServices();
+
+// // if there is not a full name, service selected or message written, throw and alert
+
+$("#contactBtn").on("click", function (event) {
+  event.preventDefault();
+  //   if ($("#formName").val("") || !$("#formName").val().includes("")) {
+  //     alert("Please enter your full name");
+  //   }
+  //   // else if ($("#formMessage").text("")) {
+  //   //   alert("Please enter a message");
+  //   // } else if ($("#default").prop("checked")) {
+  //   //   alert("Please chose the subject of your message");
+  //   // }
+  //   // alert("Thank you for your message, we will get back with you shortly!");
+
+  try {
+    if ($("#formName").val() === "" || !$("#formName").val().includes(" ")) {
+      throw "*Please enter your full name";
+      formHasErrors = true;
+    }
+    if (
+      $("#formEmail").val() === "" ||
+      !$("#formEmail").val().includes("@") ||
+      !$("#formEmail").val().includes(".") ||
+      $("#formEmail").val().includes(" ")
+    ) {
+      throw "*Please enter a valid email";
+    }
+    if ($("#formSubject").val() === "default") {
+      throw "*Please enter a subject";
+    }
+    if ($("#formMessage").val() === "") {
+      throw "*Please enter a message";
+    }
+  } catch (error) {
+    $("#error").text(error);
+    formHasErrors = true;
+  } finally {
+    if (formHasErrors) {
+      console.log("fix form errors");
+    }
+  }
+});

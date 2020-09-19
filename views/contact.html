@@ -42,42 +42,41 @@
       </div>
       <form class="contactForm col-md-6">
         <div class="form-group">
-          <label for="exampleFormControlInput1">Name</label>
+          <label for="formName">Name</label>
           <input
             type="text"
             class="form-control"
-            id="exampleFormControlInput1"
+            id="formName"
             placeholder="John Smith"
           />
-          <label for="exampleFormControlInput2">Email address</label>
+          <label for="formEmail">Email address</label>
           <input
             type="email"
             class="form-control"
-            id="exampleFormControlInput2"
+            id="formEmail"
             placeholder="name@example.com"
           />
         </div>
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Subject</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>-----Chose One-----</option>
-            <option>Building Inspection</option>
-            <option>Failure Analysis</option>
-            <option>Insurance Claims</option>
-            <option>Expert Witness</option>
-            <option>Design</option>
-            <option>Other</option>
+          <label for="formSubject">Subject</label>
+          <select class="form-control" id="formSubject">
+            <option id="default" value="default">-----Chose One-----</option>
+            <option value="insp">Building Inspection</option>
+            <option value="fail">Failure Analysis</option>
+            <option value="insure">Insurance Claims</option>
+            <option vlaue="exp">Expert Witness</option>
+            <option value="des">Design</option>
+            <option value="misc">Other</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Message</label>
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-          ></textarea>
+          <label for="formMessage">Message</label>
+          <textarea class="form-control" id="formMessage" rows="3"></textarea>
         </div>
-        <button type="submit" class="btn btn-dark">Submit</button>
+        <div id="error"></div>
+        <button id="contactBtn" type="submit" class="btn btn-dark">
+          Submit
+        </button>
       </form>
     </main>
     <footer>

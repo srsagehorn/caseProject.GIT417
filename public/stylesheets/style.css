@@ -90,6 +90,10 @@ form {
   background-color: #e4e4e4;
 }
 
+#error {
+  color: red;
+}
+
 /* -----FOOTER----- */
 footer {
   font-size: 14px;
