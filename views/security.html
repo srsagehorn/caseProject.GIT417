@@ -30,57 +30,68 @@
               <a class="nav-link" href="services.html">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="security.html">Web Security</a>
+              <a class="nav-link active" href="security.html">Web Security</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    <main>
-      <div class="col-md-8 center">
-        <h1>Contact Us</h1>
-      </div>
-      <form class="contactForm col-md-6">
-        <div class="form-group">
-          <label for="formName">Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="formName"
-            placeholder="John Smith"
-          />
-          <label for="formEmail">Email address</label>
-          <input
-            type="email"
-            class="form-control"
-            id="formEmail"
-            placeholder="name@example.com"
-          />
-        </div>
-        <div class="form-group">
-          <label for="formSubject">Subject</label>
-          <select class="form-control" id="formSubject">
-            <option id="default" value="default">-----Chose One-----</option>
-            <option>Building Inspection</option>
-            <option>Failure Analysis</option>
-            <option>Insurance Claims</option>
-            <option>Expert Witness</option>
-            <option>Design</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="formMessage">Message</label>
-          <textarea class="form-control" id="formMessage" rows="3"></textarea>
-        </div>
-        <div id="error"></div>
-        <button id="contactBtn" type="submit" class="btn btn-dark">
-          Submit
-        </button>
-      </form>
+    <main class="col-md-8 center">
+      <h1>Web Security</h1>
+
+      <h2>What can a browser access?</h2>
+      <p>This web page knows:</p>
+      <ul>
+        <li>
+          You are on a screen that is
+          <span class="bold" id="screenHeight"></span> x
+          <span class="bold" id="screenWidth"></span>
+        </li>
+        <li>Your operating system is <span id="oS" class="bold"></span></li>
+        <li>Your browser is <span id="browser" class="bold"></span></li>
+        <li>Your browser version is <span id="version" class="bold"></span></li>
+        <li>Your location is <span id="location" class="bold"></span></li>
+        <li>You are currently <span class="bold" id="line"></span></li>
+      </ul>
+
+      <h3>Learn more</h3>
+      <ul>
+        <li>
+          <a
+            href="https://www.vcpi.com/blog/best-practices-for-secure-web-browsing"
+            >10 Best Practices for Secure Web Browsing</a
+          >
+          <br />
+          <p>
+            This resource highlights keeping your browser up to date, avoiding
+            public wifi connections, and using https.
+          </p>
+        </li>
+        <li>
+          <a
+            href="https://methodic.marketing/top-7-safe-internet-browsing-practices-to-begin-today/"
+            >Top 7 Safe Internet Browsing Practices To Begin Today</a
+          >
+          <br />
+          <p>
+            This resource highlights improved privacy settings, avoiding
+            unsecure web sites, and turning on your pop up blocker.
+          </p>
+        </li>
+        <li>
+          <a href="https://support.mozilla.org/en-US/kb/how-stay-safe-web"
+            >How To Stay Safe on the Web</a
+          >
+          <br />
+          <p>
+            This resource highlights avoiding internet scams, how to read
+            security policies, and what kind of downloads to be wary of.
+          </p>
+        </li>
+      </ul>
     </main>
     <footer>
       <div class="col-md-10 center">
@@ -130,11 +141,3 @@
     <script src="../public/js/script.js"></script>
   </body>
 </html>
-
-<!-- Almost all of my code errors in the history of ever are syntax errors. Either spelling or parentheses and brackets. I use an extension called prettier that automaticaly fixes indenting and simple syntax errors like missing semi colons and commas so that is very helpful.
-
-The debugging I did in this assignment was primarily with the #formSubject selection area. I was trying to make .prop("check") work as if it was a check box as I have previously done on my calculations page. This obviously did not work and I found that out because it was skipping over this exception handling and jumping straight to "Enter a message" when the drop down was still on default. I guess that would be a logic error because the syntax was correct, I just used the wrong method so it did not do what I wanted it to do. 
-
-This was a pretty simple activity so I didnt use the console but typically I live and breath using console.log(). On more complex projects I will use a linter. I'll be honest, I dont like those very much and only find them useful on group projects.
-
-I had never used the watch function in the inspector so that was a cool thing to learn. Oftentimes variables change ten times before I need them and sometimes I dont know where my code broke down so thats useful -->

@@ -94,6 +94,11 @@ form {
   color: red;
 }
 
+/* -----SECURITY----- */
+.bold {
+  font-weight: bold;
+}
+
 /* -----FOOTER----- */
 footer {
   font-size: 14px;

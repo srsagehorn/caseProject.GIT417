@@ -141,3 +141,28 @@ $("#contactBtn").on("click", function (event) {
 
   $(".contactForm").trigger("reset");
 });
+
+// if online == true return connected else return not connected
+const onOrOff = function () {
+  return navigator.onLine
+    ? "connected to the internet"
+    : "not connected to the internet";
+};
+// display screen height
+$("#screenHeight").text(screen.height);
+// display screen width
+$("#screenWidth").text(screen.width);
+// display operating system
+$("#oS").text(navigator.platform);
+// display browser name
+$("#browser").text(navigator.appName);
+// display browser version
+$("#version").text(navigator.appVersion);
+// display location by finding longitude and latitude and triming the to two decimal points
+navigator.geolocation.getCurrentPosition(function (position) {
+  let lat = position.coords.latitude.toFixed(2);
+  let long = position.coords.longitude.toFixed(2);
+  $("#location").text(long + " longitude and " + lat + " latitude");
+});
+// run the on or offline function
+$("#line").text(onOrOff());
