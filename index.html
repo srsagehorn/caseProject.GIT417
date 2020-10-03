@@ -40,6 +40,54 @@
       </div>
     </header>
     <main class="col-md-8 center">
+      <form class="disneyForm col-md-6">
+        <div class="form-group">
+          <label for="zip">What is your zip code</label>
+          <input
+            type="text"
+            class="form-control"
+            id="zip"
+            placeholder="90210"
+          />
+        </div>
+        <div class="form-group">
+          <label for="mickey">How many fingers does Mickey mouse have?</label>
+          <select class="form-control" id="mickey">
+            <option id="default" value="default">-----Chose One-----</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message"
+            >What are you asking Santa for, for christmas?</label
+          >
+          <textarea class="form-control" id="message" rows="3"></textarea>
+        </div>
+        <label>What are Princess Aurora's other names?</label>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="briar" />
+          <label class="form-check-label" for="briar">Briar Rose</label>
+          <br />
+          <input type="checkbox" class="form-check-input" id="cind" />
+          <label class="form-check-label" for="cind">Cinderella</label>
+          <br />
+          <input type="checkbox" class="form-check-input" id="sleep" />
+          <label class="form-check-label" for="sleep">Sleeping Beauty</label>
+          <br />
+          <input type="checkbox" class="form-check-input" id="malef" />
+          <label class="form-check-label" for="malef">Maleficent</label>
+        </div>
+        <div id="error"></div>
+        <br />
+        <button id="disneyBtn" type="submit" class="btn btn-dark">
+          Submit
+        </button>
+      </form>
+      <br />
       <h1>Inspection Group</h1>
       <p>
         Engineering Evaluations, Inc. is a professional engineering firm with a

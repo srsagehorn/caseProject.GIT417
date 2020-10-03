@@ -136,33 +136,53 @@ $("#contactBtn").on("click", function (event) {
       console.log("fix form errors");
     }
   }
+  if ((formHasErrors = false)) {
+    alert("Thank you for your message we will get back with you shortly");
+
+    $(".contactForm").trigger("reset");
+  }
   // let them know we have recieved there message and clear the form
-  alert("Thank you for your message we will get back with you shortly");
-
-  $(".contactForm").trigger("reset");
 });
 
-// if online == true return connected else return not connected
-const onOrOff = function () {
-  return navigator.onLine
-    ? "connected to the internet"
-    : "not connected to the internet";
-};
-// display screen height
-$("#screenHeight").text(screen.height);
-// display screen width
-$("#screenWidth").text(screen.width);
-// display operating system
-$("#oS").text(navigator.platform);
-// display browser name
-$("#browser").text(navigator.appName);
-// display browser version
-$("#version").text(navigator.appVersion);
-// display location by finding longitude and latitude and triming the to two decimal points
-navigator.geolocation.getCurrentPosition(function (position) {
-  let lat = position.coords.latitude.toFixed(2);
-  let long = position.coords.longitude.toFixed(2);
-  $("#location").text(long + " longitude and " + lat + " latitude");
+// // if online == true return connected else return not connected
+// const onOrOff = function () {
+//   return navigator.onLine
+//     ? "connected to the internet"
+//     : "not connected to the internet";
+// };
+// // display screen height
+// $("#screenHeight").text(screen.height);
+// // display screen width
+// $("#screenWidth").text(screen.width);
+// // display operating system
+// $("#oS").text(navigator.platform);
+// // display browser name
+// $("#browser").text(navigator.appName);
+// // display browser version
+// $("#version").text(navigator.appVersion);
+// // display location by finding longitude and latitude and triming the to two decimal points
+// navigator.geolocation.getCurrentPosition(function (position) {
+//   let lat = position.coords.latitude.toFixed(2);
+//   let long = position.coords.longitude.toFixed(2);
+//   $("#location").text(long + " longitude and " + lat + " latitude");
+// });
+// // run the on or offline function
+// $("#line").text(onOrOff());
+
+// Disney form
+
+$("#disneyBtn").on("click", function (event) {
+  event.preventDefault();
+  if ($("#zip").val().isNaN()) {
+    $("#errorDis").append("Invalid ip code");
+  }
+
+  if (
+    !$("#briar").prop("checked") ||
+    !$("#sleep").prop("checked") ||
+    $("#malef").prop("checked") ||
+    $("#cind").prop("checked")
+  ) {
+    $("#errorDis").text("Incorrect names selected for princess Aurora");
+  }
 });
-// run the on or offline function
-$("#line").text(onOrOff());
