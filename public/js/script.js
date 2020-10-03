@@ -172,20 +172,32 @@ $("#contactBtn").on("click", function (event) {
 // Disney form
 
 $("#disneyBtn").on("click", function (event) {
+  let errors = 0;
+
   event.preventDefault();
   // clear error text
   $("#errorDis").text("");
+  $("#zip").removeAttr("style");
+  $("#mickey").removeAttr("style");
+  $("#message").removeAttr("style");
+  $(".form-check-label").removeAttr("style");
   // if the zip code is not a number or is not 6 characters then display an error
   if (isNaN($("#zip").val()) || $("#zip").val().length != 5) {
+    $("#zip").css({ "background-color": "rgb(255, 0, 0, 0.2)" });
     $("#errorDis").append("*Invalid zip code <br>");
+    errors++;
   }
   // if they selected that mickey mouse has anything other than 3 fingers, display and error
   if ($("#mickey").val() != "3") {
+    $("#mickey").css({ "background-color": "rgb(255, 0, 0, 0.2)" });
     $("#errorDis").append("*Incorrect number of fingers for Mickey Mouse <br>");
+    errors++;
   }
   // if the message section is left blank, display an error
   if ($("#message").val() == "") {
+    $("#message").css({ "background-color": "rgb(255, 0, 0, 0.2)" });
     $("#errorDis").append("*Dont you want something from Santa? <br>");
+    errors++;
   }
   // if the incorrect names are selected then display an error
   if (
@@ -194,10 +206,14 @@ $("#disneyBtn").on("click", function (event) {
     $("#malef").prop("checked") ||
     $("#cind").prop("checked")
   ) {
+    $(".form-check-label").css({
+      "background-color": "rgb(255, 0, 0, 0.2)",
+    });
     $("#errorDis").append("*Incorrect names selected for princess Aurora <br>");
+    errors++;
   }
   // if none of those error were triggered, thank them for their submission and clear the form
-  else {
+  if (errors == 0) {
     alert("Thank you for your submission");
     $(".disneyForm").trigger("reset");
   }
