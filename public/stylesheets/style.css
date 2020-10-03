@@ -49,6 +49,9 @@ main {
   margin-top: 40px;
 }
 /* -----HOME----- */
+#errorDis {
+  color: red;
+}
 /* -----ABOUT----- */
 /* -----SERVICES----- */
 
