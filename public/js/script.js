@@ -173,16 +173,26 @@ $("#contactBtn").on("click", function (event) {
 
 $("#disneyBtn").on("click", function (event) {
   event.preventDefault();
-  if ($("#zip").val().isNaN()) {
-    $("#errorDis").append("Invalid ip code");
-  }
+  $("#errorDis").text("");
 
+  if (isNaN($("#zip").val()) || $("#zip").val().length != 5) {
+    $("#errorDis").append("*Invalid zip code <br>");
+  }
+  if ($("#mickey").val() != "3") {
+    $("#errorDis").append("*Incorrect number of fingers for Mickey Mouse <br>");
+  }
+  if ($("#message").val() == "") {
+    $("#errorDis").append("*Dont you want something from Santa? <br>");
+  }
   if (
     !$("#briar").prop("checked") ||
     !$("#sleep").prop("checked") ||
     $("#malef").prop("checked") ||
     $("#cind").prop("checked")
   ) {
-    $("#errorDis").text("Incorrect names selected for princess Aurora");
+    $("#errorDis").append("*Incorrect names selected for princess Aurora <br>");
+  } else {
+    alert("Thank you for your submission");
+    $(".disneyForm").trigger("reset");
   }
 });
